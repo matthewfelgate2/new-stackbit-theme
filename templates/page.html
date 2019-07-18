@@ -5,27 +5,27 @@
   {% set include_dict = {'site': site, 'page': page, 'img_path': page.params.img_path} %}
   {% include "header.html" %}
 
-  <div id="content" class="site-content">
-    <main id="main" class="site-main inner">
+  <div>
+    <main>
 
-      <article class="post page post-full">
-        <header class="post-header">
+      <article>
+        <header>
           <h1 class="post-title">{{ page.params.title }}</h1>
-        </header><!-- .post-header -->
+        </header>
         {% if page.params.subtitle %}
-        <div class="post-subtitle">
+        <div>
           {{ page.params.subtitle | safe }}
-        </div><!-- .post-subtitle -->
+        </div>
         {% endif %}
-        <div class="post-content">
+        <div>
           {{ page.content }}
-        </div><!-- .post-content -->
-      </article><!-- .post -->
+        </div>
+      </article>
 
-    </main><!-- .site-main -->
+    </main>
 
     {% include "footer.html" %}
 
-  </div><!-- .site-content -->
+  </div>
 
 {% endblock %}
