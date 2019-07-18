@@ -1,10 +1,7 @@
 {% extends "body.html" %}
-
 {% block content %}
-
   {% set include_dict = {'site': site, 'page': page, 'img_path': site.params.header.bg_img} %}
   {% include "header.html" %}
-
   <div>
     <main>
       <div>
@@ -13,24 +10,13 @@
         <article>
           <header>
             <h2><a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.params.title }}</a></h2>
-            <div>
-              Published on <time class="published"
-                datetime="{{post.date | date_format("%Y-%m-%d %H:%M") }}">{{ post.date | date_format("%B %d, %Y") }}</time>
+            <div><time class="published" datetime="{{post.date | date_format("%Y-%m-%d %H:%M") }}">{{ post.date | date_format("%B %d, %Y") }}</time>
             </div>
           </header>
-          <div>
-            <p>{{ post.params.excerpt }}</p>
-          </div>
-          <p>
-            <a href="{{ post.url | relative_url }}">Keep reading <span class="icon-arrow-right" aria-hidden="true"></span></a>
-          </p>
         </article>
         {% endfor %}
       </div>
     </main>
-
     {% include "footer.html" %}
-
   </div>
-
 {% endblock %}
