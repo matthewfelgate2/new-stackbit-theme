@@ -1,20 +1,12 @@
 baseurl: "/"
-title: "Stackbit Fjord Theme"
+title: "Write Everyday"
 page_load_js: "assets/js/main.js"
 params:
   header:
-    title: Fjord
+    title: Write Everyday
     tagline: Minimal and clean blog theme
-    logo_img: "images/logo.png"
-    bg_img: "images/header-bg.jpg"
     has_nav: true
     has_social: true
-  footer:
-    content: "&copy; Stackbit-Fjord. All rights reserved."
-    links:
-      - text: Made with Stackbit
-        url: https://www.stackbit.com
-        new_window: true
   palette: yellow
 sass:
   input_file: sass/main.scss.njk
