@@ -1,9 +1,11 @@
 <header>
+  {%
   {% if include_dict.img_path %}
   <div id="header-bg" class="site-header-bg" style="background-image:url('{{ include_dict.img_path | relative_url }}')"></div>
   {% elif include_dict.site.params.header.bg_img %}
   <div id="header-bg" class="site-header-bg" style="background-image:url('{{ include_dict.site.params.header.bg_img | relative_url }}')"></div>
   {% endif %}
+  %}
   <div>
     <div>
       <div>
