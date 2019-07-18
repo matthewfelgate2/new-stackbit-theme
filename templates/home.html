@@ -2,13 +2,14 @@
 
 {% block content %}
 
-  {% set include_dict = {'site': site, 'page': page, 'img_path': site.params.header.bg_img} %}
+  {% set include_dict = {'site': site, 'page': page%}
   {% include "header.html" %}
 
-  <div id="content" class="site-content">
-    <main id="main" class="site-main inner">
+  <div>
+    <main>
+      <h1>write-everyday</h1>
 
-      <div class="post-feed">
+      <div>
         {% set display_posts = getPages("/posts") | sort(true, true, "date") %}
         {% for post in display_posts %}
         <article class="post">
