@@ -1,13 +1,19 @@
 baseurl: "/"
-title: "Write Everyday"
-page_load_js: "assets/js/main.js"
+title: "Universal"
 params:
-  header:
-    title: Write Everyday
-    tagline: Minimal and clean blog theme
-    has_nav: true
-    has_social: true
-  palette: yellow
+  logo: 'images/logo.svg'
+  docs_url: 'https://docs.stackbit.com'
+menus:
+  main:
+    - identifier: home
+      weight: 1
+      url: /
+      title: Home
+  secondary:
+    - identifier: about
+      weight: 1
+      url: about
+      title: About
 sass:
   input_file: sass/main.scss.njk
   output_file: assets/css/main.css

@@ -1,7 +1,7 @@
 {
-  "name": "fjord",
+  "name": "universal",
   "version": "1.0.0",
-  "description": "A minimal blogging theme for Stackbit",
+  "description": "Default starter theme for Unibit",
   "main": "public/index.html",
   "scripts": {
     "build": "unibit build",
@@ -11,17 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stackbithq/stackbit-theme-fjord"
+    "url": "git+https://github.com/stackbithq/stackbit-theme-universal"
   },
   "author": "Stackbit",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/stackbithq/stackbit-theme-fjord/issues"
+    "url": "https://github.com/stackbithq/stackbit-theme-universal/issues"
   },
   "homepage": "https://docs.stackbit.com/unibit/",
   "dependencies": {
     "@stackbit/unibit": "~0.1.11",
-    "lodash": "^4.17.14",
     "nodemon": "^1.19.1"
   }
 }

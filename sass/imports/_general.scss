@@ -1,36 +1,15 @@
-/**
- * General
- * ----------------------------------------------------------------------------
- */
-html {
-  font-family: _font(primary);
-  font-size: 112.5%;
-  height: 100%;
-  min-height: 100%;
-
-  @media only screen and (max-width: 600px) {
-    font-size: 100%;
-  }
-}
-
-body {
-  background: #fff;
-  color: _palette(primary);
-  line-height: 1.66667;
-}
-
 a {
-  border-bottom: 2px solid _palette(accent);
-  color: _palette(primary);
-  text-decoration: none;
-  -webkit-transition: border .3s ease, color .3s ease;
-  transition: border .3s ease, color .3s ease;
-
+  color: $primary;
+  text-decoration: underline;
   &:hover {
-    border-color: currentColor;
-    color: _palette(secondary);
-    text-decoration: none;
+    text-decoration: underline;
+    opacity: 0.8;
   }
+}
+
+p {
+  color: $grey;
+  margin-bottom: 20px;
 }
 
 h1,
@@ -39,92 +18,55 @@ h3,
 h4,
 h5,
 h6 {
-  color: _palette(secondary);
+  color: $black;
   font-weight: bold;
   line-height: 1.2;
-  margin: 1.66667rem 0 0.83333rem;
+  margin: 10px 0 20px 0;
   text-rendering: optimizeLegibility;
-
   &:first-child {
     margin-top: 0;
   }
 }
 
 h1 {
-  font-size: 2.22222rem;
+  font-size: 40px;
 }
 
 h2 {
-  font-size: 1.88889rem;
+  font-size: 30px;
 }
 
 h3 {
-  font-size: 1.33333rem;
+  font-size: 26px;
 }
 
 h4 {
-  font-size: 1.11111rem;
+  font-size: 22px;
 }
 
 h5 {
-  font-size: 0.88889rem;
+  font-size: 18px;
 }
 
 h6 {
-  font-size: 14px;
-  letter-spacing: 0.075em;
-  text-transform: uppercase;
-}
-
-p {
-  margin: 0 0 1.66667em;
-}
-
-address {
-  font-style: italic;
-  margin: 0 0 1.66667em;
-}
-
-mark,
-ins {
-  background: #fff493;
-  color: _palette(secondary);
-  padding: 0 3px;
-  text-decoration: none;
-}
-
-code {
-  background: _palette(bg);
-  border-radius: 3px;
-  color: _palette(secondary);
-  padding: 0 3px;
+  font-size: 16px;
 }
 
 pre {
-  background: _palette(bg);
-  border-radius: 3px;
-  color: _palette(secondary);
-  font-size: 0.88889rem;
-  margin: 0 0 1.66667rem;
+  border: 1px solid $secondary;
+  font-size: 1rem;
+  margin: 0 0 1.75em;
   overflow: auto;
-  padding: 1.5em 1.875em;
-  position: relative;
+  padding: 1.5em;
   white-space: pre;
-
-  > code {
-    padding: 0;
-  }
 }
 
 blockquote {
-  border-left: 5px solid _palette(accent);
-  color: _palette(secondary);
-  font-size: 1.33333rem;
-  font-style: italic;
+  border-left: 3px solid $primary;
+  font-size: 1.5rem;
   line-height: 1.5;
-  margin: 2.5rem auto;
-  max-width: 555px;
-  padding-left: 30px;
+  margin: 1.875rem 0;
+  padding-left: 1.5em;
 
   &:first-child {
     margin-top: 0
@@ -140,14 +82,12 @@ blockquote {
 
   small,
   cite {
-    color: _palette(meta);
     display: block;
-    font-size: 0.66667em;
+    font-size: 1rem;
     font-style: normal;
     font-weight: normal;
-    letter-spacing: 0.15em;
+    line-height: 1.5;
     margin-top: 1em;
-    text-transform: uppercase;
 
     &:last-child {
       margin-bottom: 0;
@@ -164,154 +104,44 @@ dt {
 }
 
 dd {
-  margin: 0 0 1.66667em;
+  margin: 0 0 1.75em;
 }
 
 ul,
 ol {
-  margin: 0 0 1.66667em;
-  padding: 0 0 0 1.66667em;
+  margin: 0 0 1.75em;
+  padding: 0 0 0 1.5em;
 }
 
 li > ul,
 li > ol {
   margin-bottom: 0;
+  color: $grey;
 }
 
 hr {
+  background-color: $secondary;
   border: 0;
-  border-bottom: 1px dashed _palette(border);
-  margin: 1.66667em 0;
+  height: 1px;
+  margin: 1.75em 0;
 }
 
 table {
-  font-size: 0.88889rem;
   line-height: 1.5;
-  margin: 0 0 1.66667rem;
+  margin: 0 0 1.75em;
   text-align: left;
   width: 100%;
-}
-
-caption {
-  color: _palette(meta);
-  font-size: 0.875em;
-  font-style: normal;
-  margin-bottom: 1em;
-  text-align: left;
 }
 
 th,
 td {
-  border-bottom: 1px dashed _palette(border);
-  padding: 0.5em 5px;
+  border-bottom: 1px solid $secondary;
+  padding: 0.5em;
 }
 
 th {
-  color: _palette(secondary);
+  color: $secondary;
   font-weight: bold;
-}
-
-/* Form fields */
-label {
-  color: _palette(secondary);
-  font-size: 0.88889rem;
-}
-
-input[type=checkbox]+label,
-input[type=radio]+label {
-  cursor: pointer;
-  padding-left: 0.25em;
-  padding-right: 1em;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-input[type="search"],
-input[type="url"],
-select,
-textarea {
-  background: _palette(bg);
-  border: 0;
-  border-radius: 3px;
-  box-shadow: none;
-  box-sizing: border-box;
-  color: _palette(primary);
-  display: inline-block;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 1.5;
-  max-width: 100%;
-  padding: 0.5em 10px;
-  vertical-align: baseline;
-  width: 100%;
-
-  &:focus {
-    outline: 0;
-  }
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-input[type="search"],
-input[type="url"],
-select {
-  height: 3em;
-}
-
-button,
-input[type="submit"],
-input[type="button"],
-input[type="reset"],
-a.button {
-  background: _palette(secondary);
-  border: 0;
-  border-radius: 3px;
-  box-sizing: border-box;
-  color: #fff;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: bold;
-  height: 3em;
-  line-height: 1.5;
-  padding: 0.25em 30px;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-
-  &:hover,
-  &:focus,
-  &:active {
-    background: _palette(primary);
-    outline: 0;
-  }
-}
-
-a.button {
-  line-height: 1.2;
-  padding-bottom: 0.75em;
-  padding-top: 0.75em;
-}
-
-#menu-toggle {
-  background: 0;
-  border: 0;
-  box-shadow: none;
-  color: inherit;
-  height: 40px;
-  padding: 0;
-  position: relative;
-  width: 40px;
-}
-
-.contact-form {
-  label {
-    display: block;
-    margin-bottom: 0.25em;
-    padding-left: 10px;
-  }
 }
 
 /* Videos, audios and embeds */
@@ -322,42 +152,8 @@ video {
   max-width: 100%;
 }
 
-.js-reframe {
-  margin: 0 0 1.66667em;
-}
-
 /* Images */
 img {
   height: auto;
   max-width: 100%;
-}
-
-.post-thumbnail img,
-.post-content img,
-.block img {
-  border-radius: 3px;
-}
-
-/* Text meant only for screen readers */
-.screen-reader-text,
-.site-logo + .site-title,
-.site-logo + .site-title + .site-description {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute !important;
-  width: 1px;
-}
-
-/* Clearing floats */
-.post-content:after {
-  clear: both;
-}
-
-.post-content:before,
-.post-content:after {
-  content: "";
-  display: table;
 }
